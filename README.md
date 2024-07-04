@@ -1,4 +1,4 @@
-# alx-higher_level_programming
+# alx-backend-python
 
 ## The Zen of Python, by Tim Peters
 

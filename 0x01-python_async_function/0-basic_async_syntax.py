@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """ Basics of Async Module """
-from asyncio import sleep
+import asyncio
 from random import uniform
 
 
@@ -15,5 +15,5 @@ async def wait_random(max_delay: int = 10) -> float:
         float: value of the random delay
     """
     max_delay = uniform(0, 10)
-    await sleep(max_delay)
+    await asyncio.sleep(max_delay)
     return max_delay

@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """ Multiple Coroutines Module """
 import asyncio
-from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> List:
+async def wait_n(n: int, max_delay: int) -> list:
     """
     Multiple coroutines at the same time with async
 
@@ -24,4 +23,4 @@ async def wait_n(n: int, max_delay: int) -> List:
     list_delays = []
     for task in completed:
         list_delays.append(task.result())
-    return list_delays
+    return sorted(list_delays)

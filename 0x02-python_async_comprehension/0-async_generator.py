@@ -2,20 +2,20 @@
 """ Async Generator Module """
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     """
     Async Generator will loop 10 times,
     each time asynchronously wait 1 second,
     then yield a random number between 0 and 10
 
     Returns:
-        AsyncGenerator[float, None]: The value of the delays
+        Generator[float, None, None]: The value of the delays
 
     Yields:
-        Iterator[AsyncGenerator[float, None]]: Yields random delays in a list
+        Iterator[Generator[float, None, None]]: Yields random delays in a list
     """
     for _ in range(10):
         await asyncio.sleep(1)

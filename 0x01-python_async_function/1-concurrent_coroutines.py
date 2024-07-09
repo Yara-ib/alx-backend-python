@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """ Multiple Coroutines Module """
 import asyncio
+from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> list:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """
     Multiple coroutines at the same time with async
 
@@ -13,7 +14,7 @@ async def wait_n(n: int, max_delay: int) -> list:
         max_delay (int): random value for the delay
 
     Returns:
-        List:  list of the delays
+        List: list of the delays
     """
     tasks = [
         asyncio.create_task(wait_random(max_delay)) for _ in range(n)

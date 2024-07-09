@@ -12,10 +12,10 @@ async def async_generator() -> AsyncGenerator[float, None]:
     then yield a random number between 0 and 10
 
     Returns:
-        AsyncGenerator[int, None]: The value of the delays
+        AsyncGenerator[float, None]: The value of the delays
 
     Yields:
-        Iterator[AsyncGenerator[int, None]]: Yields the delay in a list
+        Iterator[AsyncGenerator[float, None]]: Yields random delays in a list
     """
     for _ in range(10):
         await asyncio.sleep(1)
